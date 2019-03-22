@@ -3,7 +3,7 @@ import edu.holycross.shot.cite._
 
 
 // EDIT THIS to point to your file!!!
-val filepath:String = "/vagrant/YOUR_REPO/YOUR_TEXT.txt"
+val filepath:String = "/vagrant/CS270_programs/Alice's_adventures_in_wonderland.txt"
 // Get the file as a vector of lines, ignoring empty lines
 val myLines:Vector[String] = Source.fromFile(filepath).getLines.toVector.filter( _.size > 0 )
 
