@@ -6,7 +6,7 @@ case class IndexedLine(text:String, index:Int)
 case class ChapterHeading(title:String, index:Int)
 case class BookPara(chapterName:String, text:String, index:Int)
 
-val filepath:String = "/vagrant/CS270_programs/Alice's_adventures_in_wonderland.txt"
+val filepath:String = "alice.txt"
 val myLines:Vector[String] = Source.fromFile(filepath).getLines.toVector.filter( _.size > 0 )
 
 // Grab line numbers
@@ -17,15 +17,15 @@ val indexedFileLines:Vector[IndexedLine] = myLines.zipWithIndex.map( ln => {
 
 // Filter out chapter headings
 val chapters:Vector[ChapterHeading] = {
-  indexedFileLines.filter(_.text.startsWith("Chapter")).map( c => {
+  indexedFileLines.filter(_.text.startsWith("CHAPTER")).map( c => {
     val index:Int = c.index
-    val newTitle:String = c.text.replaceAll("Chapter","chpt_")
+    val newTitle:String = c.text.replaceAll("CHAPTER ","").replaceAll("\\.","")
     new ChapterHeading(newTitle, index)
   })
 }
 
 val realParagraphs:Vector[IndexedLine] = {
-  indexedFileLines.filter( _.text.startsWith("Chapter") == false )
+  indexedFileLines.filter( _.text.startsWith("CHAPTER") == false )
 }
 // find where each chapter begins and ends!
 val chapterRanges:Vector[Vector[ChapterHeading]] = chapters.sliding(2,1).toVector
