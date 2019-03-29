@@ -1,3 +1,0 @@
-var romanNum:Map[String,String] = Map("one" -> "I", "two" -> "II", "three" -> "III", "four" -> "IV", "five" -> "V", "six" -> "VI", "seven" -> "VII", "eight" -> "VIII", "nine" -> "IX", "ten" -> "X", "eleven" -> "XI", "twelve" -> "XII", "thirteen" -> "XIII", "fourteen" -> "XIV", "fifteen" -> "XV", "sixteen" -> "XVI", "seventeen" -> "XVII", "eighteen" -> "XVIII", "nineteen" -> "XIX", "twenty" -> "XX")
-
-var romanNumDigit:Map[Int,String] = Map(1 -> "I", 2 -> "II", 3 -> "III", 4 -> "IV", 5 -> "V", 6 -> "VI", 7 -> "VII", 8 -> "VIII", 9 -> "IX", 10 -> "X", 11 -> "XI", 12 -> "XII", 13 -> "XIII", 14 -> "XIV", 15 -> "XV", 16 -> "XVI", 17 -> "XVII", 18 -> "XVIII", 19 -> "XIX", 20 -> "XX")
