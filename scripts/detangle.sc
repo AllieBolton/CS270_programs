@@ -112,7 +112,7 @@ val allChapterLines:Vector[BookPara] = {
 val savableLines:Vector[String] = {
   allChapterLines.map( cl => {
     val aliceLine:String = {
-     val initSpaces = "^ +".r   
+     val initSpaces = "^ +".r
      val foundSpaces:Vector[String] = initSpaces.findAllIn(cl.text).toVector
      if (foundSpaces.size < 1) {
       cl.text
